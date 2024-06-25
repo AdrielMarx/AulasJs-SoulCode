@@ -54,16 +54,18 @@ else if (A === B) {
 let salario = 2300;
 let quantidadedeDependentes = 6;
 
-
+if (quantidadedeDependentes === 0) {
+    console.log('Sem dependentes. Sem ajustes no salário atual.')
+}
 
 if (quantidadedeDependentes >= 1 && quantidadedeDependentes <= 5) {
     salario *= 1.30;
+    console.log('Aplicando o devido reajuste, o salário passa a ser', salario)
 }
 else if (quantidadedeDependentes > 5) {
     salario *= 1.40;
+    console.log('Aplicando o devido reajuste, o salário passa a ser', salario)
 }
-
-console.log('Aplicando o devido reajuste, o salário passa a ser', salario)
 
 // Exercício 5 ------
 const domingo = 1;

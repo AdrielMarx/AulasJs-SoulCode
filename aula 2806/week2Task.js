@@ -69,3 +69,19 @@ function calcularMedia (numeros) {
     console.log(media)
 }
 calcularMedia([3.5, 4.5, 9.0, 10])
+
+// Exercício 8: Escreva uma função que recebe um email, e ofusca parte do seu endereço. Por exemplo: jose.almir@dev.com -> j*********@dev.com.
+function ofuscarEmail (email) {
+    let limite = email.indexOf('@')
+    let começo = email[0]
+    let parteParaOfuscar = email.slice(1, limite)
+    let fim = email.slice(limite, email.length)
+    let parteOfuscada = ''
+    for (let c of parteParaOfuscar) {
+        c = '*'
+        parteOfuscada += c
+    }
+    let emailOfuscado = [começo, parteOfuscada, fim]
+    console.log(emailOfuscado.join(''))
+}
+ofuscarEmail ('adrielmarx@email.com')

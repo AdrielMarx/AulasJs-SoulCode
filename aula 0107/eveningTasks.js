@@ -194,7 +194,6 @@ calcularMedia([4.5, 3, 1.0, 10])
 const ofuscarEmail = (email) => {
     let primeiraLetra = email[0]
     let corte = email.split('@')
-    console.log(corte)
     let nome = corte[0] 
     let ofuscar = nome.split('').map((letra) => letra = '*')
     console.log(primeiraLetra + ofuscar.join('') + '@' + corte[1])
